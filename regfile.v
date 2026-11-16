@@ -1,15 +1,15 @@
 `timescale 1ns/1ps
 
-// Modulo regfile
+// Modulo regfile para banco de registradores
 module regfile(clk, rst, regWrite, readAddr1, readAddr2, writeAddr, writeData, readData1, readData2);
   // entradas e saidas
   input wire clk, rst, regWrite;	// Clock, Reset e RegWrite
-  input wire [4:0] readAddr1;
-  input wire [4:0] readAddr2;
-  input wire [4:0] writeAddr;
-  input wire [31:0] writeData;
-  output wire [31:0] readData1;
-  output wire [31:0] readData2;
+  input wire [4:0] readAddr1;     // endereco do registrador 1
+  input wire [4:0] readAddr2;     // endereco do registrador 2
+  input wire [4:0] writeAddr;     // endereco do registrador a ser escrito
+  input wire [31:0] writeData;    // dado a ser escrito
+  output wire [31:0] readData1;   // registrador de saida 1
+  output wire [31:0] readData2;   // registrador de saida 2
   
   // banco de registradores
   reg [31:0] registers [31:0];
@@ -50,6 +50,7 @@ module regfile(clk, rst, regWrite, readAddr1, readAddr2, writeAddr, writeData, r
     registers[31] <= 32'd0;
   end
   
+  // Parte sincrona avaliada pelo clock e reset
   always @(posedge clk or posedge rst) begin
     if (rst == 1'd1) begin
       // Se o Reset == 1, reseta todos os registradores
@@ -93,6 +94,7 @@ module regfile(clk, rst, regWrite, readAddr1, readAddr2, writeAddr, writeData, r
   end
   
   // Associao assincrona as saidas
+  // Caso os enderecos dos registradores sejam 0 (registrador zero), coloca 0 na respectiva saida
   assign readData1 = (readAddr1 != 5'd0) ? registers[readAddr1] : (32'h00000000);
   assign readData2 = (readAddr2 != 5'd0) ? registers[readAddr2] : (32'h00000000);
   
