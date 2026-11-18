@@ -1,3 +1,11 @@
+/*
+ * Grupo: João Miguel, Alícia Maria, Silas Silva, Hector
+ * Disciplina: Arquitetura e Organização de Computadores - 2026.2
+ * Atividade: Projeto 02 (2ª VA) - Implementação de MIPS em Verilog
+ * Arquivo: regfile.v
+ * Descrição: Banco com 32 registradores de 32 bits
+ */
+
 `timescale 1ns/1ps
 
 // Modulo regfile para banco de registradores

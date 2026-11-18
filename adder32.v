@@ -1,3 +1,11 @@
+/*
+ * Grupo: João Miguel, Alícia Maria, Silas Silva, Hector
+ * Disciplina: Arquitetura e Organização de Computadores - 2026.2
+ * Atividade: Projeto 02 (2ª VA) - Implementação de MIPS em Verilog
+ * Arquivo: adder32.v
+ * Descrição: Somador para as operações de beq e j do processador
+ */
+
 // Modulo para somador para entradas de 32 bits
 module adder32(ent1, ent2, out);
     // entradas e saidas

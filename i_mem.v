@@ -1,3 +1,11 @@
+/*
+ * Grupo: João Miguel, Alícia Maria, Silas Silva, Hector
+ * Disciplina: Arquitetura e Organização de Computadores - 2026.2
+ * Atividade: Projeto 02 (2ª VA) - Implementação de MIPS em Verilog
+ * Arquivo: i_mem.v
+ * Descrição: Memória para a instrução apontada pelo PC
+ */
+
 module i_mem #(
     parameter DEPTH = 256,
     parameter INIT_FILE = "instruction.list"
@@ -15,6 +23,6 @@ module i_mem #(
     end
 
     // Leitura assíncrona baseada no índice da palavra
-    assign i_out = rom[address];
+    assign i_out = rom[address[31:2]];
 
 endmodule

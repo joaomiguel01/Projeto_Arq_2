@@ -1,3 +1,11 @@
+/*
+ * Grupo: João Miguel, Alícia Maria, Silas Silva, Hector
+ * Disciplina: Arquitetura e Organização de Computadores - 2026.2
+ * Atividade: Projeto 02 (2ª VA) - Implementação de MIPS em Verilog
+ * Arquivo: ula.v
+ * Descrição: Modulo para a ULA e processamento das operações
+ */
+
 // Modulo para execução de operações na ULA
 module ula(ent1, ent2, op, result, zero_flag);
     // entradas e saidas

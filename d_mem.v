@@ -1,3 +1,11 @@
+/*
+ * Grupo: João Miguel, Alícia Maria, Silas Silva, Hector
+ * Disciplina: Arquitetura e Organização de Computadores - 2026.2
+ * Atividade: Projeto 02 (2ª VA) - Implementação de MIPS em Verilog
+ * Arquivo: d_mem.v
+ * Descrição: Memória de dados do processador
+ */
+
 module d_mem #(
     parameter DEPTH = 256
 )(
@@ -23,6 +31,6 @@ module d_mem #(
     end
 
     // Leitura assíncrona com controle da flag MemRead
-    assign ReadData = (MemRead) ? ram[word_addr] : 32'h00000000;
+    assign ReadData = (MemRead) ? ram[word_addr] : 32'bz;
 
 endmodule

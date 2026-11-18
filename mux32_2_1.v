@@ -1,3 +1,11 @@
+/*
+ * Grupo: João Miguel, Alícia Maria, Silas Silva, Hector
+ * Disciplina: Arquitetura e Organização de Computadores - 2026.2
+ * Atividade: Projeto 02 (2ª VA) - Implementação de MIPS em Verilog
+ * Arquivo: mux32_2_1.v
+ * Descrição: Multiplexador com entradas de 32 bits
+ */
+
 // Modulo para multiplexador 2 pra 1 com entradas de 32 bits
 module mux32_2_1(ent1, ent2, sel, out);
     // entradas e saidas
